@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Tech | Logic</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { background-color: #050505; color: #fff; }
+    .tech-grid { background-image: radial-gradient(#22d3ee 1px, transparent 1px); background-size: 40px 40px; }
+    .tech-card { background: #0a0a0a; border: 1px solid rgba(34, 211, 238, 0.1); transition: all 0.5s ease; }
+    .tech-card:hover { border-color: #22d3ee; transform: translateY(-5px); }
+  </style>
+</head>
+<body>
+  <div class="grain-overlay"></div>
+
+  <nav class="fixed top-0 w-full z-[100] p-8 flex justify-between items-center mix-blend-difference">
+    <h2 class="text-xl font-black uppercase tracking-tighter">Pixel <span class="text-cyan-400">Tech.</span></h2>
+    <div class="flex items-center gap-8 text-[10px] font-bold uppercase tracking-[0.4em]">
+    <a href="photography.html" class="btn-photo-pill">Photography Services</a>
+    <a href="#solutions" class="hover:text-cyan-400 transition-all">Solutions</a>
+    <a href="#contact" class="hover:text-cyan-400 transition-all">Contact</a>
+    </div>
+  </nav>
+
+  <section class="h-screen flex flex-col items-center justify-center text-center relative px-6 overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-10 tech-grid"></div>
+    <div class="relative z-10">
+        <p class="text-[10px] font-bold uppercase tracking-[0.6em] text-cyan-400 mb-6">Engineering Intelligence</p>
+        <h1 class="text-[8vw] font-black uppercase leading-none tracking-tighter">
+            strategy <br /> <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-blue-500 italic">& Systems.</span>
+        </h1>
+    </div>
+  </section>
+
+  <section id="solutions" class="max-w-7xl mx-auto px-8 py-32">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+      
+      <a href="tech-ai.html" class="group relative aspect-square tech-card rounded-[3rem] overflow-hidden flex flex-col items-center justify-center p-12 text-center">
+        <i data-lucide="bot" class="w-16 h-16 text-cyan-400 mb-6 group-hover:scale-110 transition-transform"></i>
+        <h3 class="text-2xl font-black uppercase tracking-tighter">AI Automation</h3>
+        <p class="text-[10px] uppercase tracking-widest opacity-40 mt-4">Autonomous Workflows</p>
+      </a>
+
+      <a href="tech-dev.html" class="group relative aspect-square tech-card rounded-[3rem] overflow-hidden flex flex-col items-center justify-center p-12 text-center">
+        <i data-lucide="code" class="w-16 h-16 text-cyan-400 mb-6 group-hover:scale-110 transition-transform"></i>
+        <h3 class="text-2xl font-black uppercase tracking-tighter">App & Web Dev</h3>
+        <p class="text-[10px] uppercase tracking-widest opacity-40 mt-4">Full-Stack Architecture</p>
+      </a>
+
+      <a href="tech-marketing.html" class="group relative aspect-square tech-card rounded-[3rem] overflow-hidden flex flex-col items-center justify-center p-12 text-center">
+        <i data-lucide="zap" class="w-16 h-16 text-cyan-400 mb-6 group-hover:scale-110 transition-transform"></i>
+        <h3 class="text-2xl font-black uppercase tracking-tighter">Digital Marketing</h3>
+        <p class="text-[10px] uppercase tracking-widest opacity-40 mt-4">Aggressive Growth</p>
+      </a>
+
+    </div>
+  </section>
+
+  <section id="clients" class="py-32 px-8 bg-zinc-950 border-y border-white/5">
+    <div class="max-w-5xl mx-auto text-center">
+        <h2 class="text-xs font-bold uppercase tracking-[0.5em] text-cyan-400 mb-20">our clients</h2>
+        <a href="https://www.starrymountain.in/" target="_blank" class="group inline-block">
+            <h3 class="text-5xl md:text-7xl font-black uppercase tracking-tighter group-hover:text-cyan-400 transition-colors">Starry Mountain</h3>
+            <p class="text-[10px] font-bold uppercase tracking-[0.4em] opacity-40 mt-4">Growth & Digital Transformation →</p>
+        </a>
+    </div>
+  </section>
+
+  <footer class="py-40 px-8 bg-black">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+      <div class="space-y-12">
+        <h4 class="text-cyan-400 font-bold uppercase tracking-widest text-[10px]">Operations</h4>
+        <div class="space-y-8">
+            <div class="border-l-2 border-cyan-400 pl-8">
+                <h5 class="text-2xl font-black uppercase">SHASWATA PAL</h5>
+                <p class="text-gray-500 text-[10px] uppercase mt-1 italic">Operations & Tech Lead</p>
+            </div>
+            <div class="border-l-2 border-white/10 pl-8">
+                <h5 class="text-2xl font-black uppercase">DEBARGHYA DAS</h5>
+                <p class="text-gray-400 text-[10px] uppercase mt-1 italic">Marketing Lead</p>
+            </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-end items-end">
+        <h2 class="text-[12vw] font-black opacity-5 uppercase select-none">Pixel.</h2>
+      </div>
+    </div>
+  </footer>
+
+  <script>lucide.createIcons();</script>
+</body>
+</html>

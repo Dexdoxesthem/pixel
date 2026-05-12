@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pixel Photography | Artistry</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    body { background-color: #000; color: #fff; overflow-x: hidden; }
+    .grain-overlay { pointer-events: none; z-index: 9999; }
+    
+    /* Social Showcase Grid: Set for 3 items */
+    .insta-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .insta-card {
+      background: #0a0a0a;
+      border-radius: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.05);
+      min-height: 400px;
+    }
+
+    @media (max-width: 1024px) {
+      .insta-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 640px) {
+      .insta-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body class="selection:bg-red-600 selection:text-white">
+  <div class="grain-overlay"></div>
+
+  <nav class="fixed top-0 w-full z-[100] p-8 flex justify-between items-center mix-blend-difference">
+    <a href="index.html" class="w-32 h-10 block">
+      <img src="logo.png" alt="Logo" class="w-1000 h-2500" />
+    </a>
+    <div class="flex items-center gap-8 text-[10px] font-bold uppercase tracking-[0.4em]">
+    <a href="tech.html" class="btn-tech-pill">Tech Services</a>
+    <a href="#work" class="hover:text-red-600 transition-all">Work</a>
+    <a href="#contact" class="hover:text-red-600 transition-all">Contact</a>
+  </div>
+  </nav>
+
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0 opacity-30 grayscale">
+      <img id="hero-img" src="" alt="Hero" class="w-full h-full object-cover" />
+    </div>
+    <div class="relative z-10 text-center px-6">
+      <h1 class="text-[8vw] md:text-[7vw] font-black uppercase leading-[0.9] tracking-tighter">
+        Pixel Photography <br /> 
+        <span class="text-red-600 italic">& Media Production</span>
+      </h1>
+    </div>
+  </section>
+
+  <section id="work" class="max-w-7xl mx-auto px-8 py-32 border-b border-white/5">
+    <h2 class="text-[10px] font-bold uppercase tracking-[0.5em] text-red-600 mb-16 text-center">Portfolio Categories</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+      <a href="wedding.html" class="group relative aspect-square rounded-[3rem] overflow-hidden block border border-white/5">
+        <img src="portfolio/wedding/469484021_507556558987137_1726600872956330104_n.jpg" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 opacity-40 group-hover:opacity-100" />
+        <div class="absolute inset-0 flex flex-col justify-end p-10 z-10 bg-gradient-to-t from-black/80 to-transparent text-white">
+          <span class="text-[10px] font-mono text-red-600 mb-2">01</span>
+          <h3 class="text-3xl font-black uppercase tracking-tighter">Wedding</h3>
+        </div>
+      </a>
+      <a href="prewedding.html" class="group relative aspect-square rounded-[3rem] overflow-hidden block border border-white/5">
+        <img src="portfolio/prewedding/473077795_531970089879117_957260498607922763_n.jpg" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 opacity-40 group-hover:opacity-100" />
+        <div class="absolute inset-0 flex flex-col justify-end p-10 z-10 bg-gradient-to-t from-black/80 to-transparent text-white">
+          <span class="text-[10px] font-mono text-red-600 mb-2">02</span>
+          <h3 class="text-3xl font-black uppercase tracking-tighter">Pre-Wedding</h3>
+        </div>
+      </a>
+      <a href="products.html" class="group relative aspect-square rounded-[3rem] overflow-hidden block border border-white/5">
+        <img src="portfolio/jwellery/469515652_508609105548549_2425089810458451874_n.jpg" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 opacity-40 group-hover:opacity-100" />
+        <div class="absolute inset-0 flex flex-col justify-end p-10 z-10 bg-gradient-to-t from-black/80 to-transparent text-white">
+          <span class="text-[10px] font-mono text-red-600 mb-2">03</span>
+          <h3 class="text-3xl font-black uppercase tracking-tighter">Products</h3>
+        </div>
+      </a>
+      <a href="machinery.html" class="group relative aspect-square rounded-[3rem] overflow-hidden block border border-white/5">
+        <img src="portfolio/machiney%20products/1%20(FILEminimizer).jpg" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 opacity-40 group-hover:opacity-100" />
+        <div class="absolute inset-0 flex flex-col justify-end p-10 z-10 bg-gradient-to-t from-black/80 to-transparent text-white">
+          <span class="text-[10px] font-mono text-red-600 mb-2">04</span>
+          <h3 class="text-3xl font-black uppercase tracking-tighter">Industrial</h3>
+        </div>
+      </a>
+      <a href="hospitality.html" class="group relative aspect-square rounded-[3rem] overflow-hidden block border border-white/5">
+        <img src="portfolio/resorts/13.jpg" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 group-hover:scale-110 transition-all duration-700 opacity-40 group-hover:opacity-100" />
+        <div class="absolute inset-0 flex flex-col justify-end p-10 z-10 bg-gradient-to-t from-black/80 to-transparent text-white">
+          <span class="text-[10px] font-mono text-red-600 mb-2">05</span>
+          <h3 class="text-3xl font-black uppercase tracking-tighter">Hospitality</h3>
+        </div>
+      </a>
+      <a href="birthday.html" class="group relative aspect-square rounded-[3rem] overflow-hidden block border border-white/5">
+        <img src="portfolio/birthday and rice ceremony/475380122_547329475009845_1047365540683086434_n.jpg" class="absolute inset-0 w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700 opacity-40 group-hover:opacity-100" />
+        <div class="absolute inset-0 flex flex-col justify-end p-10 z-10 bg-gradient-to-t from-black/80 to-transparent text-white">
+          <span class="text-[10px] font-mono text-red-600 mb-2">06</span>
+          <h3 class="text-3xl font-black uppercase tracking-tighter">Ceremonies</h3>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section id="social" class="py-32 px-8 bg-zinc-950 border-b border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-black uppercase tracking-tighter text-white">Social <span class="text-red-600 italic">Showcase.</span></h2>
+        <p class="text-[10px] font-bold uppercase tracking-[0.4em] opacity-40 mt-4 italic text-white">Randomly selected from our feed</p>
+      </div>
+
+      <div id="insta-container" class="insta-grid">
+         </div>
+    </div>
+  </section>
+
+  <section id="reviews" class="py-32 overflow-hidden bg-black">
+    <div class="max-w-7xl mx-auto px-8 mb-16 text-center">
+        <h2 class="text-5xl font-black uppercase tracking-tighter text-white">Client <span class="text-red-600 italic">Voices.</span></h2>
+        <p class="text-[10px] font-bold uppercase tracking-widest opacity-40 mt-4 text-white">4.9/5 Rating based on  Google Reviews</p>
+    </div>
+
+    <div class="reviews-track">
+        <div id="reviews-content" class="flex">
+            <div class="review-card">
+                <div class="flex gap-1 text-yellow-500 mb-4"><i data-lucide="star" class="w-3 fill-current"></i><i data-lucide="star" class="w-3 fill-current"></i><i data-lucide="star" class="w-3 fill-current"></i><i data-lucide="star" class="w-3 fill-current"></i><i data-lucide="star" class="w-3 fill-current"></i></div>
+                <p class="text-sm opacity-70 italic mb-6">"absolutely fantastic! From start to finish, their professionalism, creativity, and attention to detail truly stood out."</p>
+                <h4 class="text-xs font-black uppercase tracking-widest">Itz Suvojit</h4>
+            </div>
+            <div class="review-card">
+                <div class="flex gap-1 text-yellow-500 mb-4"><i data-lucide="star" class="w-3 fill-current"></i><i data-lucide="star" class="w-3 fill-current"></i><i data-lucide="star" class="w-3 fill-current"></i><i data-lucide="star" class="w-3 fill-current"></i><i data-lucide="star" class="w-3 fill-current"></i></div>
+                <p class="text-sm opacity-70 italic mb-6">"The quality of the photography production was outstanding—capturing exactly what we were looking for."</p>
+                <h4 class="text-xs font-black uppercase tracking-widest">Arishdem paul</h4>
+            </div>
+            <div class="review-card">
+                <div class="flex gap-1 text-yellow-500 mb-4"><i data-lucide="star" class="w-3 fill-current"></i><i data-lucide="star" class="w-3 fill-current"></i><i data-lucide="star" class="w-3 fill-current"></i><i data-lucide="star" class="w-3 fill-current"></i><i data-lucide="star" class="w-3 fill-current"></i></div>
+                <p class="text-sm opacity-70 italic mb-6">"work is amazing, output was great. i special recommand everyone."</p>
+                <h4 class="text-xs font-black uppercase tracking-widest">Diya Senapati</h4>
+            </div>
+        </div>
+    </div>
+  </section>
+
+  <section class="max-w-4xl mx-auto px-8 py-40 text-center">
+    <h2 class="text-[10px] font-bold uppercase tracking-[0.5em] text-red-600 mb-12">Who We Are</h2>
+    <div class="space-y-8 text-base md:text-lg font-light leading-relaxed opacity-70">
+      <p><span class="font-black text-white uppercase tracking-tighter">Pixel Photography & Media Production</span> is a KOLKATA, INDIA based company engaged with various types of content from concept development to final production.</p>
+      <p class="uppercase text-xs tracking-widest font-bold text-white/90">Wedding | Commercial | Corporate | Product Shoot | Event Shoot | Fashion | Modeling | Portfolio | Advertisement</p>
+    </div>
+  </section>
+
+  <footer id="contact" class="py-40 px-8 border-t border-white/5 bg-black">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20">
+      <div class="space-y-12 text-left">
+        <h4 class="text-red-600 font-bold uppercase tracking-widest text-[10px]">The Studio</h4>
+        <div class="space-y-8 text-white">
+          <div class="border-l-2 border-red-600 pl-8">
+            <h5 class="text-2xl font-black uppercase">RAHUL KUMAR MANNA</h5>
+            <p class="text-gray-500 text-[10px] uppercase mt-2 italic">Cinematographer / Production Head</p>
+          </div>
+          <div class="border-l-2 border-white/10 pl-8">
+            <h5 class="text-2xl font-black uppercase">DEBARGHYA DAS</h5>
+            <p class="text-gray-400 text-[10px] uppercase mt-2 italic">Photographer / Marketing Head</p>
+          </div>
+        </div>
+      </div>
+      <div class="flex flex-col justify-between items-end">
+        <div class="flex gap-8">
+           <a href="https://www.instagram.com/pixel_photography2015/" target="_blank" class="group transition-all">
+             <img src="insta logo.png" alt="Insta" class="h-12 object-contain grayscale group-hover:grayscale-0 transition-all opacity-50 group-hover:opacity-100">
+           </a>
+           <a href="https://www.facebook.com/thepixelphotographyandmediaproduction" target="_blank" class="group transition-all">
+             <img src="fb logo.png" alt="FB" class="h-12 object-contain grayscale group-hover:grayscale-0 transition-all opacity-50 group-hover:opacity-100">
+           </a>
+           <a href="https://www.linkedin.com/company/pixel-photography-media-production/" target="_blank" class="group transition-all">
+             <img src="linkedin logo.png" alt="LinkedIn" class="h-12 object-contain grayscale group-hover:grayscale-0 transition-all opacity-50 group-hover:opacity-100">
+           </a>
+        </div>
+        <h2 class="text-[12vw] font-black opacity-5 uppercase select-none mt-20 text-white">PIXEL.</h2>
+      </div>
+    </div>
+  </footer>
+
+  <script async src="//www.instagram.com/embed.js"></script>
+  <script>
+    lucide.createIcons();
+
+    // 1. Instagram Link Pool
+    const instaLinks = [
+      "https://www.instagram.com/p/DYCAqnbk13F/",
+      "https://www.instagram.com/p/DX7JKdDD5mP/",
+      "https://www.instagram.com/p/C_WY6ZJTgsb/",
+      "https://www.instagram.com/p/CzcDAeSyyJD/",
+      "https://www.instagram.com/p/C9qIf5qShSS/",
+      "https://www.instagram.com/reel/C40GYLbP7XV/",
+      "https://www.instagram.com/p/DQNPVrfkwCW/"
+    ];
+
+    // 2. Randomize and Inject 3 Items
+    function injectSocial() {
+      const container = document.getElementById('insta-container');
+      const shuffled = instaLinks.sort(() => 0.5 - Math.random());
+      const selected = shuffled.slice(0, 3);
+      
+      container.innerHTML = selected.map(link => `
+        <div class="insta-card">
+          <blockquote class="instagram-media" data-instgrm-permalink="${link}" data-instgrm-version="14"></blockquote>
+        </div>
+      `).join('');
+
+      // Important: Re-trigger Instagram's script if it has loaded
+      if (window.instgrm) {
+        window.instgrm.Embeds.process();
+      }
+    }
+
+    // Run Social Injector
+    injectSocial();
+
+    // 3. Infinite Reviews Logic
+    const track = document.querySelector('.reviews-track');
+    const content = document.getElementById('reviews-content');
+    if(track && content) {
+        track.appendChild(content.cloneNode(true));
+        track.appendChild(content.cloneNode(true));
+    }
+
+    // 4. Hero Randomizer
+    const images = [
+      "portfolio/wedding/473014918_531232879952838_8214144063467947210_n.jpg",
+      "portfolio/models/12%20(FILEminimizer).jpg",
+      "portfolio/prewedding/473077795_531970089879117_957260498607922763_n.jpg"
+    ];
+    document.getElementById('hero-img').src = images[Math.floor(Math.random() * images.length)];
+  </script>
+</body>
+</html>

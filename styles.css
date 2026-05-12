@@ -1,0 +1,135 @@
+/* styles.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700;900&display=swap');
+
+:root {
+    --accent-red: #dc2626;
+    --accent-cyan: #22d3ee;
+    --zinc-950: #050505;
+    --zinc-900: #0a0a0a;
+    --zinc-800: #18181b;
+}
+
+body {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    overflow-x: hidden;
+    line-height: 1.5;
+}
+
+/* --- UTILITIES --- */
+::selection { background: var(--accent-red); color: white; }
+.tech-selection::selection { background: var(--accent-cyan); color: black; }
+
+html { scroll-behavior: smooth; }
+
+.grain-overlay {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: url('https://grainy-gradients.vercel.app/noise.svg');
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* --- PROMINENT SWITCH BUTTONS --- */
+/* Use these in your Navbars */
+
+.btn-tech-pill {
+    padding: 0.6rem 1.5rem;
+    border: 1px solid rgba(34, 211, 238, 0.3);
+    color: var(--accent-cyan) !important;
+    border-radius: 9999px;
+    background: rgba(34, 211, 238, 0.03);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-tech-pill:hover {
+    background: var(--accent-cyan);
+    color: #000 !important;
+    border-color: var(--accent-cyan);
+    box-shadow: 0 0 25px rgba(34, 211, 238, 0.4);
+    transform: translateY(-2px);
+}
+
+.btn-photo-pill {
+    padding: 0.6rem 1.5rem;
+    border: 1px solid rgba(220, 38, 38, 0.3);
+    color: var(--accent-red) !important;
+    border-radius: 9999px;
+    background: rgba(220, 38, 38, 0.03);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+    display: inline-flex;
+    align-items: center;
+}
+
+.btn-photo-pill:hover {
+    background: var(--accent-red);
+    color: #fff !important;
+    border-color: var(--accent-red);
+    box-shadow: 0 0 25px rgba(220, 38, 38, 0.4);
+    transform: translateY(-2px);
+}
+
+/* --- ANIMATED REVIEWS SCROLL --- */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-350px * 7)); }
+}
+
+.reviews-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 40s linear infinite;
+}
+
+.reviews-track:hover {
+    animation-play-state: paused;
+}
+
+.review-card {
+    width: 320px;
+    margin-right: 2rem;
+    background: var(--zinc-900);
+    border: 1px solid rgba(255,255,255,0.05);
+    padding: 2.5rem;
+    border-radius: 2rem;
+    flex-shrink: 0;
+    transition: border-color 0.3s;
+}
+
+.review-card:hover {
+    border-color: var(--accent-red);
+}
+
+/* --- GRID & LAYOUT --- */
+.social-card {
+    background-color: var(--zinc-900);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.5s ease;
+}
+
+.social-container {
+    display: flex;
+    overflow-x: auto;
+    gap: 1.5rem;
+    padding-bottom: 2rem;
+    scrollbar-width: none;
+}
+.social-container::-webkit-scrollbar { display: none; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: #000; }
+::-webkit-scrollbar-thumb { background: var(--accent-red); }
